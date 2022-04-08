@@ -1,0 +1,21 @@
+<div class="container">
+    <inetum-search (callbackData)="reciveData($event)"></inetum-search>
+
+    <div class="card-container">
+        <mat-card *ngFor="let item of dishes">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{item.strMeal}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="item.strMealThumb" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+          {{item.strInstructions}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="accent"  [routerLink]="['/dishes/detail', item.idMeal]" mat-button mat-dialog-close> Ver más</button>
+        </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

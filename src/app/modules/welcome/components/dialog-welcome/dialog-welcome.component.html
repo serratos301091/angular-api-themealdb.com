@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Welcome</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>{{data.title}}</h3>
+  <img src="{{data.img}}" alt="">
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+
+  <button mat-raised-button color="accent"  [routerLink]="['dishes/detail', data.id]" mat-button mat-dialog-close> Ver más</button>
+</mat-dialog-actions>

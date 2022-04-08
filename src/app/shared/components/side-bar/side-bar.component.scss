@@ -1,0 +1,84 @@
+
+.menu {
+    background-color: black;
+    width: 15.5rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: .5rem 1rem;
+    color: #fff;
+}
+
+.menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: .8;
+}
+
+.menu__list .list-label {
+    font-size: 90%;
+    font-weight: 500;
+}
+
+.menu__list .list-wrapper-item {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+    padding-top: 10px;
+    
+}
+
+.menu__list .list-wrapper-item .uil {
+    font-size: 1.8rem;
+    padding-right: .5rem;
+}
+
+.menu__separator {
+    margin: 1rem 0;
+}
+
+.menu__separator.line-separator {
+    border-bottom: solid 1px #fff;
+}
+
+.menu__list.list-three .list-wrapper-item {
+    padding: .25rem 0;
+}
+
+.menu__list li {
+    cursor: pointer;
+}
+
+.img-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    &__img-food {
+        background-image: url('https://cdn1.matadornetwork.com/blogs/2/2020/04/Huevos-divorciados-560x420.jpg') ;
+        background-repeat: no-repeat;
+        background-size:110px;
+        background-position: center;
+        border-radius: 80px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+.l-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    &__title {
+        margin-top: 8px;
+        font-weight: normal;
+    }
+}
+

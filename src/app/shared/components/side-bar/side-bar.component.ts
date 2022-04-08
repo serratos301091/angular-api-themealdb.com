@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'inetum-side-bar',
@@ -7,9 +7,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
 
+
+  linksMenu: Array<any> = [
+    {
+      name: 'Welcome', 
+      icon: 'uil-estate',
+      router: ['/welcome']
+    },
+    {
+      name: 'Ingredientes', 
+      icon: 'uil-crockery',
+      router: ['/', 'ingredients']
+
+    },
+    {
+      name: 'Platillos', 
+      icon: 'uil-pizza-slice',
+      router: ['/', 'dishes']
+
+    },
+    {
+      name: 'Perfil', 
+      icon: 'uil-user',
+      router: ['/', 'perfil']
+
+    }
+  ]
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  
 
 }

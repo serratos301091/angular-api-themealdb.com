@@ -1,0 +1,43 @@
+<div class="container">
+    
+    <div class="container__form">
+        <form autocomplete="off"
+        [formGroup] = "loginForm"
+        (ngSubmit) =" login()">  
+        <div class="container__form--title">
+            Welcome Inetum
+        </div>
+
+        <small class="error" *ngIf="isAuth">*** Incorrect credentials *** </small>
+        <small class="error-tip" *ngIf="isAuth">user/root</small>
+
+
+        <div class="container__form--user">
+            <mat-form-field >
+                <input type="text" matInput  name="user" 
+                        formControlName="user" placeholder="User" 
+                 required/>
+            </mat-form-field>
+        </div>
+
+        <div class="container__form--password">
+            <mat-form-field >
+                <input type="password" matInput   name="password" 
+                        formControlName="password" placeholder="Password"  
+                required/>
+            </mat-form-field>
+        </div>
+        <div class="container__form--submit">
+            <button type="submit" mat-raised-button color="accent">Log In</button>        
+        </div>
+        <div class="container__form--remember">
+            <mat-checkbox name="remember" formControlName="remember">
+                Remember me?
+            </mat-checkbox>
+        </div>
+    
+        </form>
+    </div>
+
+</div>
+
